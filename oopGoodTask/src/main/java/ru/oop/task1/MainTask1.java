@@ -22,6 +22,11 @@ public class MainTask1 {
      */
     public static void moveTo(Person person, Position destination) {
         // TODO
+        var car = person.getCar();
+        car.driveToOwner(person);
+        car.driveToPoint(destination);
+        person.updatePositionData(car.getCarPosition());
+        person.walk(destination);
         assert person.getPosition() == destination;
     }
 }
