@@ -7,8 +7,8 @@ package ru.oop.task2;
 public interface Transport extends Positioned {
     /**
      * движение в выбранную точку
-     *
-     * @param destination местоназначения
+     * @param destination - точка назначения
+     * @param passenger - перевозимый пассажир
      */
-    void moveTo(Position destination);
+    void drivePassengerToPoint(Position destination, Person passenger);
 }

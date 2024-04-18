@@ -6,14 +6,12 @@ package ru.oop.task1;
  * @author vpyzhyanov
  * @since 21.10.2020
  */
-public interface Person extends GarageOwner {
+public interface Person {
 
     /**
      * Текущее местоположение
      */
     Position getPosition();
-
-    void updatePositionData(Position currentPosition);
 
     /**
      * Пройти до указанного места из текущего местоположения

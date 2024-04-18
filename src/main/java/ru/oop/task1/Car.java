@@ -1,24 +1,20 @@
 package ru.oop.task1;
 
-public interface Car {
+public class Car {
 
     /**
-     * движение машины в заданную точку по дорогам
-     *
-     * @param destination место назначения
+     * перевозка пассажиров в заданную точку по дорогам
+     * @param passenger - пассажир машины(в т.ч. водитель)
+     * @param destination - заданная точка движения
      */
-    void driveToPoint(Position destination);
+    void drivePassengerToPoint(Position destination, Person passenger){
+
+    }
 
     /**
-     * перемещение к владельцу
-     *
-     * @param owner владелец
+     *Транспортное средство
      */
+    public Car(Position position){
 
-    void driveToOwner(Person owner);
-
-    /**
-     * получить позицию машины
-     */
-    Position getCarPosition();
+    }
 }

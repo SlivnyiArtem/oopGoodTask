@@ -6,7 +6,7 @@ package ru.oop.task2;
  * @author vpyzhyanov
  * @since 21.10.2020
  */
-interface Person extends Positioned, Citizen {
+interface Person extends Positioned {
 
     /**
      * Пройти до указанного места из текущего местоположения

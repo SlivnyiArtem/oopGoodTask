@@ -13,11 +13,4 @@ interface Positioned {
      * Текущее местоположение
      */
     Position getPosition();
-
-    /**
-     * обновляет текущее местоположение
-     *
-     * @param newPosition новое местоположение
-     */
-    void updatePosition(Position newPosition);
 }

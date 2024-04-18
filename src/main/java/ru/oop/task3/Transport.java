@@ -6,12 +6,9 @@ package ru.oop.task3;
 
 public interface Transport extends Positioned {
     /**
-     * движение в выбранную точку, перевозка пассажира(обновление его координаты)
-     * при невохможности добраться в выбранную точку,
-     * высадка пассажира на минимально возможном расстоянии
-     *
-     * @param destination местоназначения
-     * @param passenger пассажир
+     * движение в выбранную точку
+     * @param destination - точка назначения
+     * @param passenger - перевозимый пассажир
      */
-    void moveTo(Position destination, Person passenger);
+    void drivePassengerToPoint(Position destination, Person passenger);
 }

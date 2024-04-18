@@ -1,7 +1,7 @@
 package ru.oop.task3;
 
+import java.util.Arrays;
 import java.util.LinkedList;
-import java.util.Optional;
 
 /**
  * <b>Задача 3:</b><br>
@@ -26,18 +26,12 @@ public class MainTask3 {
      * на любом, заранее определённом транспорте
      */
     public static void moveTo(Person person, Position destination) {
-        // TODO
-        Optional<LinkedList<Transport>> transferOptional = person.makeTransferList(person.lookForTransports(),
-                                                                            person.getPosition(), destination);
-        transferOptional.ifPresent(
-                (value) -> {
-                    while (!value.isEmpty()) {
-                        Transport currTransport = value.pop();
-                        person.walk(currTransport.getPosition());
-                        currTransport.moveTo(destination, person);
-                        person.updatePosition(currTransport.getPosition());
-                    }
-                });
+        LinkedList<Transport> transportList = new LinkedList<>(Arrays.asList(new Car(person), new Bus("43", person), new Bus("50", person)));
+        while (!transportList.isEmpty()) {
+            Transport currTransport = transportList.pop();
+            person.walk(currTransport.getPosition());
+            currTransport.drivePassengerToPoint(destination, person);
+        }
         person.walk(destination);
         assert person.getPosition() == destination;
     }
