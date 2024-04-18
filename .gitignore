@@ -25,5 +25,3 @@ hs_err_pid*
 # IDEA
 .idea/
 *.iml
-./.idea
-/.idea/
